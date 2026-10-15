@@ -403,7 +403,10 @@ avdmanager list avd
 ```text
 บันทึกรูปผลลัพธ์ที่นี่ และคำอธิบาย
 ```
+<img width="365" height="811" alt="image" src="https://github.com/user-attachments/assets/4c04cfdc-de93-4748-9151-44e8441fa393" />
+<img width="1211" height="498" alt="image" src="https://github.com/user-attachments/assets/b68fae3e-06c2-4000-84d7-ebeaddeeb731" />
 
+หลังผู้ใช้เลือกบัญชี Google แอปจะได้ idToken ซึ่งเป็นตัวยืนยันว่าผู้ใช้คือใคร เปรียบเหมือนบัตรประชาชน กับ accessToken ซึ่งเป็นสิทธิ์เข้าถึงข้อมูลเพิ่มเติม เช่น อีเมล เปรียบเหมือนบัตรผ่านชั่วคราวที่มีวันหมดอายุ ทั้งสองตัวถูกส่งเข้า GoogleAuthProvider.credential() เพื่อสร้าง Credential แล้วเรียก signInWithCredential() นำไปแลกเป็น Session ของ Firebase Authentication Firebase ต้องเห็นครบทั้งคู่จึงจะยอมให้ล็อกอิน พอสำเร็จ ผู้ใช้จะมีสถานะล็อกอินเหมือนการใช้ Email/Password และ authStateChanges จะส่งค่าใหม่ออกมาทันที ซึ่งเป็นสิ่งที่ AuthGate ในส่วนที่ 4 ใช้สลับหน้าจอ
 ---
 
 ## ส่วนที่ 4: AuthGate — สลับหน้าจอตามสถานะผู้ใช้

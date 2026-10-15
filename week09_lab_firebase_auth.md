@@ -548,7 +548,12 @@ Widget build(BuildContext context) {
 ```text
 บันทึกรูปผลลัพธ์ที่นี่ (3 ภาพ) และคำอธิบาย
 ```
-
+<img width="370" height="697" alt="image" src="https://github.com/user-attachments/assets/96dc7047-3c4a-45f6-a9e7-2ee312f8c3e2" />
+<img width="368" height="840" alt="image" src="https://github.com/user-attachments/assets/273287b6-97a3-4e0f-8332-0ef4017f5a2a" />
+<img width="373" height="841" alt="image" src="https://github.com/user-attachments/assets/3e3079bc-5b74-4ace-9da8-c349168c7331" />
+```text
+authStateChanges() เป็น Stream ที่ Firebase ปล่อยค่าใหม่ทุกครั้งที่สถานะผู้ใช้เปลี่ยน ได้ User เมื่อล็อกอิน และ null เมื่อออกจากระบบ StreamBuilder เรียก builder ใหม่ทุกครั้งที่มีค่าใหม่ จึงสร้างหน้าจอตามสถานะล่าสุดให้อัตโนมัติ null แสดง LoginPage, มี User แสดง MainScaffold ฟังก์ชัน login/logout แค่เปลี่ยนสถานะผู้ใช้ โดยไม่ต้องรู้ว่าหน้าถัดไปคืออะไร จึงไม่ต้องเขียน Navigator.push/pop เอง และเมื่อเปิดแอปใหม่ Firebase จำ session เดิมไว้ AuthGate ก็พาไปหน้าที่ถูกต้องให้เอง
+```
 ---
 
 ## ส่วนที่ 5: ขยาย Repository Pattern ด้วย ItemRepositoryFirestore

@@ -567,7 +567,9 @@ authStateChanges() เป็น Stream ที่ Firebase ปล่อยค่�
 2. ถ้าในอนาคตอาจารย์สั่งให้เปลี่ยนจาก Fake Store API ไปใช้ API อื่น ต้องแก้ไฟล์กี่ไฟล์ ถ้าทุก Widget เรียกผ่าน Interface `ItemRepository` เท่านั้น?
 
 ```text
-บันทึกคำตอบของคุณที่นี่
+1. ถ้าไปแก้ ItemRepositoryApi ที่ใช้งานได้อยู่แล้ว มีโอกาสทำให้ส่วนเดิมพังได้ การเพิ่มคลาสใหม่ที่ implements ItemRepository ไม่กระทบของเดิมเลย ส่วนการเรียก Firestore ตรงจาก HomePage จะทำให้ UI ผูกติดกับ Firestore และต้องรู้เรื่อง collection กับการแปลงข้อมูลเอง ซึ่งไม่ใช่หน้าที่ของ UI
+
+2. แก้แค่ 1-2 ไฟล์ คือไฟล์ repository ที่เปลี่ยน API หรือสร้างคลาสใหม่ กับ main.dart ที่ใช้สร้างตัว repository ส่วน HomePage กับ Widget อื่นไม่ต้องแก้ เพราะรู้จักแค่ Interface ItemRepository และเรียก getItems() เท่านั้น
 ```
 
 ### ขั้นตอนที่ 5.2: **นักศึกษาเขียน Code เอง** — ItemRepositoryFirestore
@@ -640,8 +642,9 @@ final pages = [
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอ Home ที่แสดงสินค้าจากทั้งสองแหล่งข้อมูลปนกันอยู่ในลิสต์เดียว พร้อม Badge ที่แยกแหล่งที่มาชัดเจน (ถ้ายังไม่เคยมีประกาศจริงใน Firestore เลย ให้ทำส่วนที่ 6 ให้เสร็จก่อนแล้วย้อนกลับมาถ่ายภาพ Checkpoint นี้) อธิบายว่าการออกแบบให้ `HomePage` ไม่รู้จัก `ItemRepositoryApi`/`ItemRepositoryFirestore` โดยตรง แต่รู้จักผ่าน Interface `ItemRepository` เท่านั้น ช่วยให้ทดสอบหรือเปลี่ยนแหล่งข้อมูลในอนาคตง่ายขึ้นอย่างไร
 
 ```text
-บันทึกรูปผลลัพธ์ที่นี่ และคำอธิบาย
+HomePage รู้จักแค่ Interface ItemRepository และเรียก getItems() เท่านั้น ไม่รู้ว่าข้างหลังเป็น API หรือ Firestore ตอนทดสอบจึงสร้าง Fake Repository ที่คืนข้อมูลตัวอย่างมาใส่แทนได้เลย โดยไม่ต้องต่อเน็ตหรือ Firebase ส่วนการเปลี่ยนหรือเพิ่มแหล่งข้อมูลก็แค่สร้างคลาสใหม่ที่ implements ItemRepository แล้วใส่เข้า List ใน main.dart ไม่ต้องแก้ HomePage เลย เหมือนตอนที่เพิ่ม Firestore เข้ามา
 ```
+<img width="346" height="657" alt="image" src="https://github.com/user-attachments/assets/7c66a28f-9119-4045-b281-d598ea0f097d" />
 
 ---
 

@@ -179,7 +179,11 @@ Future<void> main() async {
 ```
 
 ## (ข)
+
+```
 <img width="422" height="512" alt="image" src="https://github.com/user-attachments/assets/80e569d6-bfa1-4e9a-9f95-2774f651663f" />
+รหัสผ่านที่ใส่ไปมีแค่ 3 ตัว ซึ่งสั้นกว่า 6 ตัวที่ Firebase กำหนด มันเลยโยน FirebaseAuthException ที่มี code เป็น weak-password ถูกจับด้วย catch ตัวเดิมใน signUp() แล้ว _translate() เข้า case 'weak-password' คืนข้อความ "รหัสผ่านสั้นหรือคาดเดาง่ายเกินไป (อย่างน้อย 6 ตัวอักษร)"
+```
 
 ---
 

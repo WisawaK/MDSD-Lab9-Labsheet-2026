@@ -39,6 +39,7 @@
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+<img width="1917" height="1023" alt="image" src="https://github.com/user-attachments/assets/ff4446b6-0e65-4725-903d-5778c52d1f50" />
 
 ### ขั้นตอนที่ 1.2: 🔧 ทำตามขั้นตอน — ติดตั้งเครื่องมือและเชื่อมโปรเจกต์ด้วย FlutterFire CLI
 
@@ -167,6 +168,14 @@ Future<void> main() async {
 ```text
 บันทึกรูปผลลัพธ์ที่นี่ และคำอธิบายของแต่ละกรณี
 ```
+<img width="423" height="967" alt="image" src="https://github.com/user-attachments/assets/366b9e0b-44d1-4ea7-abe1-4964632b74b5" />
+<img width="1465" height="650" alt="image" src="https://github.com/user-attachments/assets/f2831f87-ee8f-4df2-92fb-11ba522ac885" />
+
+## (ก)
+<img width="425" height="576" alt="image" src="https://github.com/user-attachments/assets/a6f09e3d-9d01-48ce-b076-6f30bc602851" />
+
+## (ข)
+<img width="422" height="512" alt="image" src="https://github.com/user-attachments/assets/80e569d6-bfa1-4e9a-9f95-2774f651663f" />
 
 ---
 

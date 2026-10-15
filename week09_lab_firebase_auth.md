@@ -173,6 +173,9 @@ Future<void> main() async {
 
 ## (ก)
 <img width="425" height="576" alt="image" src="https://github.com/user-attachments/assets/a6f09e3d-9d01-48ce-b076-6f30bc602851" />
+```
+พอสมัครด้วยอีเมลที่มีบัญชีอยู่แล้ว Firebase จะโยน FirebaseAuthException ที่มี code เป็น email-already-in-use ออกมา ใน signUp() ของ auth_service.dart มี on FirebaseAuthException catch (e) ดักไว้ แล้วส่ง e.code ไปให้เมธอด _translate() ซึ่งเข้า case 'email-already-in-use' และคืนข้อความ "อีเมลนี้ถูกใช้สมัครไปแล้ว" ให้หน้า Login แสดงเป็นตัวอักษรสีแดง
+```
 
 ## (ข)
 <img width="422" height="512" alt="image" src="https://github.com/user-attachments/assets/80e569d6-bfa1-4e9a-9f95-2774f651663f" />

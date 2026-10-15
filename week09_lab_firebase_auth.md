@@ -697,12 +697,21 @@ HomePage รู้จักแค่ Interface ItemRepository และเรี
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+<img width="362" height="841" alt="image" src="https://github.com/user-attachments/assets/5ddf860a-8bd0-45d2-8fca-023261f78a15" />
+<img width="1418" height="622" alt="image" src="https://github.com/user-attachments/assets/62a962cb-e1ed-4298-a433-ae19bcea94a4" />
+<img width="1458" height="893" alt="image" src="https://github.com/user-attachments/assets/b6753f9b-b178-4ea4-a698-307e457b8557" />
+
+# ร่างที่โพสต์หายไป
+<img width="372" height="840" alt="image" src="https://github.com/user-attachments/assets/6ac62464-1e38-4b40-b783-439129a8e31a" />
 
 > ✅ **Checkpoint 6.2** ถ่ายภาพหน้าจอ Firebase Console เมนู Storage ที่แสดงไฟล์รูปภาพที่อัปโหลดสำเร็จ และภาพหน้าจอ Firestore ที่แสดงว่าเอกสารมี field `imageUrl` เป็น URL จริงที่เปิดดูได้ ถ่ายภาพหน้าจอแอปที่แสดงรูปสินค้านั้นบนหน้า Home ผ่าน `Image.network(imageUrl)` ด้วย (ย้อนกลับไปถ่ายภาพ Checkpoint 5.1 ให้ครบตอนนี้ ถ้ายังไม่ได้ทำ)
 
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+<img width="370" height="842" alt="image" src="https://github.com/user-attachments/assets/3b48381b-eac8-4828-b857-87faee3a5a23" />
+<img width="1443" height="611" alt="image" src="https://github.com/user-attachments/assets/91746c58-ccf4-45c8-b555-5f0227e8f4b5" />
+<img width="1418" height="655" alt="image" src="https://github.com/user-attachments/assets/b600c40a-f28a-4fa2-9734-5620eac1c3b2" />
 
 ---
 
@@ -734,8 +743,15 @@ service cloud.firestore {
 > ✅ **Checkpoint 7.1 (Self-Study)** ถ่ายภาพหน้าจอผลการทดลองทั้ง 2 กรณีใน Rules Playground เขียนอธิบายสั้น ๆ ว่าทำไม Client-side Validation (การไม่แสดงปุ่มแก้ไขให้เห็น) เพียงอย่างเดียวจึงไม่เพียงพอต่อความปลอดภัยของข้อมูลจริง
 
 ```text
-บันทึกรูปผลลัพธ์ที่นี่ และคำอธิบาย
+Client-side Validation เช่นการไม่แสดงปุ่มแก้ไขหรือลบ ป้องกันได้แค่ที่หน้าจอของแอปเราเท่านั้น แต่ Firestore เปิดให้เรียกผ่าน SDK หรือ REST API ได้โดยตรง ผู้ไม่หวังดีสามารถเขียนโค้ดของตัวเองหรือดัดแปลงแอป เพื่อสั่งแก้ไขหรือลบเอกสารของคนอื่นโดยข้ามหน้าจอของเราไปเลย โค้ดที่รันบนเครื่องผู้ใช้จึงไว้ใจไม่ได้ ต้องตรวจสิทธิ์ที่ฝั่งเซิร์ฟเวอร์ ซึ่งก็คือ Security Rules ที่เช็กว่า request.auth.uid ตรงกับ sellerId ของเอกสารหรือไม่ ถ้าไม่ตรงจะถูกปฏิเสธไม่ว่าคำขอจะมาจากแอปหรือไม่ก็ตาม
 ```
+
+## ก
+<img width="1488" height="897" alt="image" src="https://github.com/user-attachments/assets/f7d1867b-bb68-4da3-b547-eef11f5496ad" />
+
+
+##ข
+<img width="1130" height="610" alt="image" src="https://github.com/user-attachments/assets/c9d9807c-011a-4d3b-b234-d8d439707a62" />
 
 ---
 
@@ -755,6 +771,20 @@ service cloud.firestore {
 ```text
 บันทึกรูปผลลัพธ์ที่นี่ 
 ```
+
+## 1
+<img width="371" height="840" alt="image" src="https://github.com/user-attachments/assets/56a1972f-e84b-4e95-879c-23551f514d30" />
+
+## 2
+<img width="355" height="847" alt="image" src="https://github.com/user-attachments/assets/b4af9fc0-94b6-499f-ada3-fd81e61dded8" />
+<img width="368" height="840" alt="image" src="https://github.com/user-attachments/assets/858e1471-7c06-4049-8d2d-10b7240101c4" />
+<img width="361" height="835" alt="image" src="https://github.com/user-attachments/assets/62880d6c-17ac-4746-ac98-01abed732e02" />
+
+## 3
+<img width="372" height="832" alt="image" src="https://github.com/user-attachments/assets/24c31bef-5ea5-410d-8179-65a08234fa86" />
+
+## 4
+<img width="375" height="822" alt="image" src="https://github.com/user-attachments/assets/68fdb016-3a7c-47b3-8397-0c26f711e490" />
 
 ---
 
